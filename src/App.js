@@ -3,6 +3,7 @@ import "./App.css";
 function App() {
   const title = "Welcome to the new blog";
   const likes = 50;
+  const link = "http://www.adriantut.dev";
 
   return (
     <div className="App">
@@ -14,6 +15,9 @@ function App() {
         <p>{"hello, ninjas"}</p>
         <p>{[1, 2, 3, 4, 5]}</p>
         <p>{Math.random() * 10}</p>
+
+        {/* Dynamic values as attribute values  */}
+        <a href={link}>Adrian site </a>
       </div>
     </div>
   );
