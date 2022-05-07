@@ -1,24 +1,21 @@
 import React from "react";
 
 function Home() {
-  const handleClick = () => {
-    console.log("hello");
+  const handleClick = (e) => {
+    console.log("hello", e);
   };
 
-  const handleClickAgain = (name) => {
-    console.log("hello" + name);
+  const handleClickAgain = (name, e) => {
+    console.log("hello" + name, e.target);
   };
 
   return (
     <div className="home">
       <h2>Homepage</h2>
       <button onClick={handleClick}>Click Me!</button>
-      <button
-        onClick={() => {
-          handleClickAgain(" Mario");
-        }}
-      >
-        Click me again!
+      <button onClick={(e) => handleClickAgain(" Mario", e)}>
+        {" "}
+        Click me again!{" "}
       </button>
     </div>
   );
