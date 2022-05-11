@@ -14,7 +14,7 @@ function Home() {
 
   return (
     <div className="home">
-      <Bloglist blogs={blogs} />
+      <Bloglist blogs={blogs} title="All Blogs" />
     </div>
   );
 }
