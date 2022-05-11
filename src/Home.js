@@ -15,6 +15,10 @@ function Home() {
   return (
     <div className="home">
       <Bloglist blogs={blogs} title="All Blogs" />
+      <Bloglist
+        blogs={blogs.filter((blog) => blog.author === "mario")}
+        title="Mario's Blogs"
+      />
     </div>
   );
 }
