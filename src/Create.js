@@ -1,12 +1,19 @@
-import React from "react";
+import React, { useState } from "react";
 
 const Create = () => {
+  const [title, setTitle] = useState("");
+
   return (
     <div className="create">
       <h2>Add a New Blog</h2>
       <form>
         <label>Blog title:</label>
-        <input type="text" required></input>
+        <input
+          type="text"
+          required
+          value={title}
+          onChange={(e) => setTitle(e.target.value)}
+        ></input>
         <label>Blog body:</label>
         <textarea required></textarea>
         <label>Blog author:</label>
@@ -15,6 +22,7 @@ const Create = () => {
           <option value="yoshi">yoshi</option>
         </select>
         <button>Add Blog</button>
+        <p>{title}</p>
       </form>
     </div>
   );
